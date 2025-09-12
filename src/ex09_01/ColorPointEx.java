@@ -1,8 +1,5 @@
 package ex09_01;
 
-import ex09_02.ColorPoint;
-import ex09_02.Point;
-
 class Point {
 	private int x, y;
 	public void set(int x, int y) {
