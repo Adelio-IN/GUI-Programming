@@ -10,7 +10,7 @@ public class NullContainerEx extends JFrame {
 		Container c = getContentPane();
 		c.setLayout(null);
 		
-		JLabel la = new JLabel("Hello, Press Buttons!");
+		JLabel la = new JLabel("2024011862 이인");
 		la.setLocation(130, 50);
 		la.setSize(200, 20);
 		c.add(la);
