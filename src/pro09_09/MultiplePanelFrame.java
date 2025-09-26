@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MultiplePanelFrame extends JFrame {
+	private CenterPanel center;
+
 	public MultiplePanelFrame() {
 		setTitle("BorderLayout Sample");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -12,15 +14,18 @@ public class MultiplePanelFrame extends JFrame {
 		c.setLayout(new BorderLayout());
 
 		c.add(new NorthPanel(), BorderLayout.NORTH);
-		c.add(new CenterPanel(), BorderLayout.CENTER);
+
+		center = new CenterPanel();
+		c.add(center, BorderLayout.CENTER);
+
 		c.add(new SouthPanel(), BorderLayout.SOUTH);
 
 		for (int i = 1; i < 15; i++) {
 			JLabel label = new JLabel("*");
 			label.setForeground(Color.RED);
 
-			int x = (int) (Math.random() * 240) + 10;
-			int y = (int) (Math.random() * 240) + 10;
+			int x = (int) (Math.random() * 280);
+			int y = (int) (Math.random() * 180);
 
 			label.setSize(10, 10);
 			label.setLocation(x, y);
@@ -43,7 +48,9 @@ public class MultiplePanelFrame extends JFrame {
 
 	class CenterPanel extends JPanel {
 		public CenterPanel() {
+			setLayout(new FlowLayout(FlowLayout.LEFT));
 			add(new JButton("Refresh"));
+
 		}
 	}
 

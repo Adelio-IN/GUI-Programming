@@ -2,6 +2,7 @@ package pro09_03;
 
 import java.awt.*;
 import javax.swing.*;
+import java.math.*;
 
 public class TenButtonGridLayoutFrame extends JFrame {
 	private Color[] color = { Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.CYAN, Color.BLUE, Color.MAGENTA,
