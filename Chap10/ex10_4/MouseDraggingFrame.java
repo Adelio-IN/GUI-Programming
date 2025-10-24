@@ -49,41 +49,40 @@ class MouseDraggingFrame extends JFrame {
 /*
 package ex10_4;
 
-import java.awt.Color;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+class MouseDraggingFrame extends JFrame{
+    JPanel contentPane = new JPanel();
+    
+    MouseDraggingFrame(){
+        this.setTitle("2024011862 이인");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        this.setContentPane(contentPane);
+        contentPane.setBackground(Color.GREEN);
+        contentPane.addMouseMotionListener(new MouseMotionListener(){
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                contentPane.setBackground(Color.YELLOW);
+            }
 
-class MouseDraggingFrame extends JFrame {
-	JPanel contentPane = new JPanel();
-
-	MouseDraggingFrame() {
-		this.setTitle("2024011862 이인");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		this.setContentPane(contentPane);
-		contentPane.setBackground(Color.GREEN);
-
-		contentPane.addMouseMotionListener(new MouseMotionListener() {
-			@Override
-			public void mouseDragged(MouseEvent e) {
-				contentPane.setBackground(Color.YELLOW);
-			}
-
-			@Override
-			public void mouseMoved(MouseEvent e) {
-				contentPane.setBackground(Color.GREEN);
-			}
-		});
-
-		this.setSize(250, 150);
-		this.setVisible(true);
-	}
-
-	public static void main(String[] args) {
-		new MouseDraggingFrame();
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                contentPane.setBackground(Color.GREEN);
+            }
+            
+        });
+        this.setSize(250,150);
+        this.setVisible(true);
+        
+        contentPane.requestFocus();
+    }
+    
+    public static void main(String[] args) {
+        new MouseDraggingFrame();
+	
 	}
 }
  */
