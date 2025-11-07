@@ -13,7 +13,7 @@ public class TenButtonGridLayoutFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Container c = getContentPane();
-		c.setLayout(new GridLayout(1, 10));
+		c.setLayout(new GridLayout(1, 10)); // 행 1개 열 10개
 
 		JButton[] btn = new JButton[10];
 		for (int i = 0; i < btn.length; i++) {
