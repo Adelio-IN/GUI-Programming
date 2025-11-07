@@ -10,9 +10,9 @@ public class CheckBoxEx extends JFrame {
 		Container c = getContentPane();
 		c.setLayout(new FlowLayout());
 		ImageIcon cherryIcon = new ImageIcon(
-				"C:\\Users\\SAMSUNG Galaxy\\Desktop\\GUI-Programming-main\\Chap11\\images\\cherry.jpg");
+				"C:\\Users\\SAMSUNG Galaxy\\Desktop\\Gui_Programming-main\\Chap11\\images\\cherry.jpg");
 		ImageIcon selectedCherryIcon = new ImageIcon(
-				"C:\\Users\\SAMSUNG Galaxy\\Desktop\\GUI-Programming-main\\Chap11\\images\\selectedCherry.jpg");
+				"C:\\Users\\SAMSUNG Galaxy\\Desktop\\Gui_Programming-main\\Chap11\\images\\selectedCherry.jpg");
 
 		JCheckBox apple = new JCheckBox("사과");
 		JCheckBox pear = new JCheckBox("배", true);
