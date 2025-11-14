@@ -2,7 +2,7 @@ package ex11_07;
 
 import java.awt.*;
 import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener; // 1. ItemListener 임포트 추가
+import java.awt.event.ItemListener;
 
 import javax.swing.*;
 
