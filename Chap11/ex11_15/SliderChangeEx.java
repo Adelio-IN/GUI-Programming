@@ -5,54 +5,41 @@ import java.awt.*;
 import javax.swing.event.*;
 
 public class SliderChangeEx extends JFrame {
-	private JLabel colorLabel;
-	private JSlider[] sl = new JSlider[3];
+
+	private JLabel valueLabel;
 
 	public SliderChangeEx() {
 		setTitle("2024011862 이인");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		Container c = getContentPane();
 		c.setLayout(new FlowLayout());
 
-		colorLabel = new JLabel(" 슬라이더 샘플임 ");
-		colorLabel.setPreferredSize(new Dimension(250, 80));
+		valueLabel = new JLabel("100");
+		valueLabel.setOpaque(true);
+		valueLabel.setBackground(Color.GREEN);
+		valueLabel.setFont(new Font("맑은 고딕", Font.BOLD, 15));
+		valueLabel.setPreferredSize(new Dimension(30, 20));
 
-		for (int i = 0; i < sl.length; i++) {
-			sl[i] = new JSlider(JSlider.HORIZONTAL, 0, 255, 128);
-			sl[i].setPaintLabels(true);
-			sl[i].setPaintTicks(true);
-			sl[i].setPaintTrack(true);
-			sl[i].setMajorTickSpacing(50);
-			sl[i].setMinorTickSpacing(10);
-			sl[i].addChangeListener(new MyChangeListener());
-			c.add(sl[i]);
-		}
+		JSlider s = new JSlider(JSlider.HORIZONTAL, 100, 200, 100);
+		s.setPaintLabels(true);
+		s.setPaintTicks(true);
+		s.setPaintTrack(true);
+		s.setMajorTickSpacing(20);
 
-		sl[0].setForeground(Color.RED);
-		sl[1].setForeground(Color.GREEN);
-		sl[2].setForeground(Color.BLUE);
+		s.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				int val = s.getValue();
+				valueLabel.setText(Integer.toString(val));
+			}
+		});
 
-		int r = sl[0].getValue();
-		int g = sl[1].getValue();
-		int b = sl[2].getValue();
+		c.add(s);
+		c.add(valueLabel);
 
-		colorLabel.setOpaque(true);
-		colorLabel.setBackground(new Color(r, g, b));
-		c.add(colorLabel);
-
-		setSize(300, 230);
+		setSize(330, 150);
 		setVisible(true);
-	}
-
-	class MyChangeListener implements ChangeListener {
-		@Override
-		public void stateChanged(ChangeEvent e) {
-			int r = sl[0].getValue();
-			int g = sl[1].getValue();
-			int b = sl[2].getValue();
-
-			colorLabel.setBackground(new Color(r, g, b));
-		}
 	}
 
 	public static void main(String[] args) {
