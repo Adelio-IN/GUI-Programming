@@ -23,7 +23,7 @@ public class ComboBoxEx extends JFrame {
 			nameCombo.addItem(names[i]);
 			c.add(nameCombo);
 		}
-		nameCombo.removeItem("jaemoon");
+		nameCombo.removeItemAt(1);
 		setSize(300, 300);
 		setVisible(true);
 	}
